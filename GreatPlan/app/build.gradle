@@ -6,11 +6,11 @@ android {
 
     defaultConfig {
         applicationId "com.greatplan.myapplication"
-        minSdkVersion 26
+        minSdkVersion 22
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
-
+        javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -28,7 +28,39 @@ dependencies {
 
     implementation 'androidx.appcompat:appcompat:1.0.2'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    //Retrofit结合RxJava的依赖
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.4'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
+    //okhttp
+    implementation 'com.squareup.okhttp3:okhttp:3.4.2'
+    //日志拦截器
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+    //Gson
+    implementation 'com.google.code.gson:gson:2.4'
+    //Material Design
+    implementation 'com.google.android.material:material:1.1.0'
+    //ButterKnife
+    implementation 'com.jakewharton:butterknife:7.0.1'
+    //角标
+    implementation 'q.rorbin:badgeview:1.1.3'
+    //第三方框架XBanner轮播
+    implementation 'com.github.xiaohaibin:XBanner:1.6.1'
+    //Glide请求图片依赖
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    //AgentWeb
+    implementation 'com.just.agentweb:agentweb:4.1.3' // (必选)
+    implementation 'com.just.agentweb:filechooser:4.1.3'// (可选)
+    implementation 'com.download.library:Downloader:4.1.3'// (可选)
+    //fresco
+    implementation 'com.facebook.fresco:fresco:0.14.1'
+    //XRecyclerview
+    implementation 'com.jcodecraeer:xrecyclerview:1.6.0'
 }
